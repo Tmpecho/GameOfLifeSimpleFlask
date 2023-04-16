@@ -32,14 +32,19 @@ function createRandomGrid() {
 }
 
 async function updateGrid() {
-    const response = await fetch("/update_grid", {
-        method: "POST",
-        body: JSON.stringify(grid),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    });
-    return await response.json();
+    try {
+        const response = await fetch("/update_grid", {
+            method: "POST",
+            body: JSON.stringify(grid),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        return await response.json();
+    } catch (e) {
+        console.error(`Error in updateGrid(): ${e}`);
+        return grid;
+    }
 }
 
 let isDrawing = false;
@@ -97,9 +102,13 @@ function renderGrid() {
 }
 
 async function tick() {
-    grid = await updateGrid();
-    generation += 1;
-    renderGrid();
+    try {
+        grid = await updateGrid();
+        generation += 1;
+        renderGrid();
+    } catch (e) {
+        console.error(`Error in tick(): ${e}`);
+    }
 }
 
 function startGame() {
