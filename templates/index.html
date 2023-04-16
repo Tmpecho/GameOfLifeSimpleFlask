@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/styles.css" />
+        <title>Conway's Game of Life</title>
+    </head>
+    <body>
+        <h1 class="title">Conway's Game of Life</h1>
+        <div class="container">
+            <div class="generation">
+                Generation: <span id="gen-num">0</span>
+            </div>
+            <div class="game-container">
+                <div id="grid-container"></div>
+                <div class="buttons">
+                    <button id="start-btn" class="button-1">
+                        Start simulation
+                    </button>
+                    <button id="stop-btn" class="button-1">
+                        Stop simulation
+                    </button>
+                    <button id="fill-btn" class="button-1">
+                        Fill with random cells
+                    </button>
+                    <button id="clear-btn" class="button-1">Reset</button>
+                </div>
+            </div>
+        </div>
+        <script src="/static/gameoflife.js"></script>
+    </body>
+    <footer>
+        <div>
+            <p class="footer-text">Johannes Aamot-Skeidsvoll</p>
+        </div>
+    </footer>
+</html>
