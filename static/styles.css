@@ -5,6 +5,13 @@ body {
   background-color: rgb(247, 244, 236);
 }
 
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   text-align: center;
   color: #FFFFFF;
@@ -12,6 +19,7 @@ body {
   margin: 0;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+  flex-grow: 1;
 }
 
 .container {
@@ -104,6 +112,34 @@ button {
   transform: translateY(0);
 }
 
+.button-2 {
+  align-items: center;
+  background-color: #1C1C1C;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 1rem;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
 #grid-container {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -132,4 +168,59 @@ button {
   padding: 0.2rem;
   margin: 0;
   color: #ddd;
+}
+
+.about-button-container {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+
+.about-section {
+  margin-bottom: 1rem;
+}
+
+#about-btn {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+
+.about-panel {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  transition: all 250ms;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media (max-width: 900px) {
+  .container {
+    margin: 2rem;
+  }
+
+  .game-container {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-1 {
+    margin: 0.5rem;
+  }
 }
