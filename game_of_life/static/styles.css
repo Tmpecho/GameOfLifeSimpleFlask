@@ -7,10 +7,10 @@ body {
 
 .title {
   text-align: center;
-  color: #FFFFFF; /* set title color to white */
-  background-color: #1C1C1C; /* set background color of header to very dark gray */
+  color: #FFFFFF;
+  background-color: #1C1C1C;
   margin: 0;
-  padding: 1rem; /* add padding */
+  padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 }
 
@@ -123,4 +123,13 @@ button {
 
 #gen-num {
   color: #1C1C1C;
+}
+
+.footer-text {
+  background-color: #1C1C1C;
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem;
+  margin: 0;
+  color: #ddd;
 }
