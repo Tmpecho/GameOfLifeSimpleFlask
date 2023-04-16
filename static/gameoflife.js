@@ -7,6 +7,7 @@ const UPDATE_SPEED_MS = 50;
 let grid = createEmptyGrid();
 let intervalId;
 let generation = 0;
+let isRunning = false;
 
 function createEmptyGrid() {
     let grid = [];
@@ -102,11 +103,15 @@ async function tick() {
 }
 
 function startGame() {
-    intervalId = setInterval(tick, UPDATE_SPEED_MS);
+    if (!isRunning) {
+        intervalId = setInterval(tick, UPDATE_SPEED_MS);
+        isRunning = true;
+    }
 }
 
 function stopGame() {
     clearInterval(intervalId);
+    isRunning = false;
 }
 
 function fillRandomGrid() {
@@ -128,3 +133,9 @@ document.getElementById("stop-btn").addEventListener("click", stopGame);
 document.getElementById("fill-btn").addEventListener("click", fillRandomGrid);
 document.getElementById("clear-btn").addEventListener("click", clearGrid);
 document.getElementById("gen-num").textContent = generation;
+document.getElementById("step-btn").addEventListener("click", tick);
+document.getElementById("about-btn").addEventListener("click", () => {
+    const aboutPanel = document.getElementById("about-panel");
+    aboutPanel.classList.toggle("hidden");
+  });
+  
