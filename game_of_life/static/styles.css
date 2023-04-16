@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(247, 244, 236);
+}
+
+.title {
+  text-align: center;
+  color: #FFFFFF; /* set title color to white */
+  background-color: #1C1C1C; /* set background color of header to very dark gray */
+  margin: 0;
+  padding: 1rem; /* add padding */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+}
+
+.container {
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 5px;
+  height: 5px;
+  border: 1px solid #ddd;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+.full {
+  background-color: #1C1C1C;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.button-1 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 1rem;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-1:hover,
+.button-1:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-1:hover {
+  transform: translateY(-1px);
+}
+
+.button-1:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+#grid-container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.generation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#gen-num {
+  color: #1C1C1C;
+}
