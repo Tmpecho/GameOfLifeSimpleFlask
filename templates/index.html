@@ -7,8 +7,32 @@
         <title>Conway's Game of Life</title>
     </head>
     <body>
-        <h1 class="title">Conway's Game of Life</h1>
+        <header>
+            <h1 class="title">Conway's Game of Life</h1>
+            <div class="about-button-container">
+                <button id="about-btn" class="button-2">About</button>
+            </div>
+        </header>
         <div class="container">
+            <div class="about-section">
+                <div id="about-panel" class="about-panel hidden">
+                    <h2>About Conway's Game of Life</h2>
+                    <p>
+                        Conway's Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. The game consists of an infinite grid of cells, each of which can be in one of two states: alive or dead. Each cell interacts with its eight neighbors, which are the cells that are horizontally, vertically, or diagonally adjacent.
+                    </p>
+                    <p>
+                        At each step in time, the following rules are applied to determine the next state of the grid:
+                    </p>
+                    <ul>
+                        <li>Any live cell with two or three live neighbors survives.</li>
+                        <li>Any dead cell with exactly three live neighbors becomes a live cell.</li>
+                        <li>All other live cells die in the next generation. Similarly, all other dead cells stay dead.</li>
+                    </ul>
+                    <p>
+                        The Game of Life is known for its ability to create complex patterns and behaviors from simple rules, and it has been widely studied in various fields, including mathematics, computer science, and biology.
+                    </p>
+                </div>
+            </div>
             <div class="generation">
                 Generation: <span id="gen-num">0</span>
             </div>
@@ -25,6 +49,7 @@
                         Fill with random cells
                     </button>
                     <button id="clear-btn" class="button-1">Reset</button>
+                    <button id="step-btn" class="button-1">Step</button>
                 </div>
             </div>
         </div>
