@@ -19,6 +19,5 @@ Read more: [Conway's Game of Life, Wikipedia](https://en.wikipedia.org/wiki/Conw
 
 ## TODO:
 There are many improvents to be made. Functionality is at the moment very simple.
-1. Bug where hovering over a button can produce gray artifacts behind the button.
-2. Pressing *Start simulation* several times runs the simulation several times over each other creating unwanted behavior.
-3. The app does dynamically scale and thus looks terrible at smaller window sizes.
+- Bug where hovering over a button can produce gray artifacts behind the button.
+- The app does dynamically scale and thus looks terrible at smaller window sizes.
